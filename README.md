@@ -1,4 +1,6 @@
 # AlarixDos
+Educational Purpose Only.
+
 Credit to LITEDDOS (4L13199)
 ## How to use?
 ```
